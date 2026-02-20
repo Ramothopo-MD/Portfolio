@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thyemeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramothopo Mosewa Desmond | Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["ui-sans-serif", "system-ui"] }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-950 text-slate-100">
+<!-- Top Bar -->
+<header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10">MD</span>
+      <span>Ramothopo M.D</span>
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm text-slate-200 md:flex">
+      <a class="hover:text-white" href="#about">About</a>
+      <a class="hover:text-white" href="#skills">Skills</a>
+      <a class="hover:text-white" href="#projects">Projects</a>
+      <a class="hover:text-white" href="#experience">Experience</a>
+      <a class="hover:text-white" href="#contact">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+              href="https://github.com/your-username"
+              target="_blank"
+              class="rounded-xl border border-white/10 px-3 py-2 text-sm hover:bg-white/10"
+              aria-label="GitHub"
+      >GitHub</a>
+
+      <a
+              href="Ramothopo_Mosewa_Desmond_CV.pdf"
+              class="rounded-xl bg-white px-3 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200"
+      >Download CV</a>
+
+      <button
+              id="menuBtn"
+              class="md:hidden rounded-xl border border-white/10 px-3 py-2 text-sm hover:bg-white/10"
+              aria-label="Open menu"
+      >Menu</button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-950 md:hidden">
+    <div class="mx-auto max-w-6xl px-4 py-3 text-sm">
+      <div class="grid gap-2">
+        <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#about">About</a>
+        <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#skills">Skills</a>
+        <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#projects">Projects</a>
+        <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#experience">Experience</a>
+        <a class="rounded-lg px-2 py-2 hover:bg-white/10" href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="pointer-events-none absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+    <div class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">
+          Backend • Java • Spring Boot • SQL • Data Integrity
+        </p>
+
+        <h1 class="mt-4 text-4xl font-bold leading-tight tracking-tight md:text-5xl">
+          Software Developer focused on secure, scalable backend systems.
+        </h1>
+
+        <p class="mt-4 max-w-xl text-slate-300">
+          I build reliable REST APIs and backend services with a strong emphasis on
+          <span class="text-white font-semibold">data validation</span>,
+          <span class="text-white font-semibold">system reliability</span>, and clean SDLC practices.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+            View Projects
+          </a>
+          <a href="#contact" class="rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10">
+            Contact Me
+          </a>
+          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank"
+             class="rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10">
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 gap-3 max-w-md">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-xs text-slate-300">Location</p>
+            <p class="mt-1 font-semibold">Polokwane, SA</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-xs text-slate-300">Primary Stack</p>
+            <p class="mt-1 font-semibold">Java • Spring Boot • MySQL</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Card -->
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="flex items-center gap-4">
+          <div class="h-14 w-14 rounded-2xl bg-white/10 grid place-items-center text-lg font-bold">MD</div>
+          <div>
+            <p class="font-semibold">Ramothopo Mosewa Desmond</p>
+            <p class="text-sm text-slate-300">Backend Developer • Data Quality Focus</p>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-3 text-sm text-slate-200">
+          <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+            <span class="text-slate-300">Email</span>
+            <a class="hover:text-white" href="mailto:ramothopomd@gmail.com">ramothopomd@gmail.com</a>
+          </div>
+          <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+            <span class="text-slate-300">Phone</span>
+            <a class="hover:text-white" href="tel:+27824721267">082 472 1267</a>
+          </div>
+          <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+            <span class="text-slate-300">GitHub</span>
+            <a class="hover:text-white" target="_blank" href="https://github.com/your-username">github.com/your-username</a>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+          <p class="text-xs text-slate-300">Currently</p>
+          <p class="mt-1 text-sm text-slate-200">
+            Open to backend roles (Java / Spring Boot), and projects requiring strong data integrity and reliability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid gap-10 md:grid-cols-3">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">About</h2>
+        <p class="mt-2 text-slate-300">
+          A short, technical summary that employers can scan quickly.
+        </p>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <p class="text-slate-200 leading-relaxed">
+            I’m a Computer Science final-year student with professional experience as a Software Developer at
+            Hiteknologysolutions, where I worked on backend development and performed data quality assurance to ensure
+            records were stored correctly in the database. I enjoy building secure APIs, debugging persistence issues,
+            and improving system reliability through clear documentation and testing.
+          </p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+              <p class="text-xs text-slate-300">Strengths</p>
+              <ul class="mt-2 space-y-1 text-sm text-slate-200 list-disc pl-5">
+                <li>Data validation & integrity checks</li>
+                <li>REST API development</li>
+                <li>Debugging & problem-solving</li>
+                <li>Documentation & SDLC discipline</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/40 p-4">
+              <p class="text-xs text-slate-300">Interests</p>
+              <ul class="mt-2 space-y-1 text-sm text-slate-200 list-disc pl-5">
+                <li>Payment systems & transaction processing</li>
+                <li>Cloud & containerization (learning)</li>
+                <li>System design & enterprise architecture</li>
+                <li>Performance & reliability engineering</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Skills</h2>
+        <p class="mt-2 text-slate-300">Grouped to match how recruiters scan CVs.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <p class="font-semibold">Backend</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-white/10 px-3 py-1">Java</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Spring Boot</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">JPA</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Hibernate</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <p class="font-semibold">Database</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-white/10 px-3 py-1">MySQL</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">PL/SQL</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">DB Design</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Data Validation</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">SQL Queries</span>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <p class="font-semibold">Tools</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-white/10 px-3 py-1">Git</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">GitHub</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Maven</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Linux</span>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <p class="font-semibold">Networking</p>
+        <div class="mt-3 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-white/10 px-3 py-1">Cisco Packet Tracer</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">IP Fundamentals</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Routing Basics</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Projects</h2>
+        <p class="mt-2 text-slate-300">Show real systems, not only UI pages.</p>
+      </div>
+      <a href="https://github.com/your-username?tab=repositories" target="_blank"
+         class="rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10">
+        View All Repos
+      </a>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2">
+      <!-- Project Card -->
+      <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-semibold">CareerSync — Job Portal</h3>
+            <p class="mt-1 text-sm text-slate-300">
+              Job portal with role-based access, CRUD operations, and secure authentication.
+            </p>
+          </div>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">Java</span>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-white/10 px-3 py-1">Spring Boot</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">MySQL</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Spring Security</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">REST</span>
+        </div>
+
+        <div class="mt-6 flex gap-3">
+          <a href="https://github.com/your-username/careersync" target="_blank"
+             class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+            GitHub
+          </a>
+          <a href="#" class="rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10">
+            Live Demo
+          </a>
+        </div>
+      </article>
+
+      <!-- Project Card -->
+      <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-semibold">Data Validation Module</h3>
+            <p class="mt-1 text-sm text-slate-300">
+              Validates captured records and ensures correct storage, preventing duplicates and inconsistencies.
+            </p>
+          </div>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">SQL</span>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-white/10 px-3 py-1">Database Rules</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Integrity Checks</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Testing</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Docs</span>
+        </div>
+
+        <div class="mt-6 flex gap-3">
+          <a href="https://github.com/your-username/data-validation" target="_blank"
+             class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+            GitHub
+          </a>
+          <a href="#" class="rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10">
+            Case Study
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl font-bold tracking-tight">Experience</h2>
+    <p class="mt-2 text-slate-300">Work integrated learning.</p>
+
+    <div class="mt-8 grid gap-4">
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <div class="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <p class="text-lg font-semibold">Software Developer & Data Quality Assurance</p>
+            <p class="text-sm text-slate-300">Hiteknologysolutions • June 2025 – November 2025 • Contract</p>
+            <p class="text-lg font-semibold">Reference will be supplied upon request.</p>
+          </div>
+          <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-slate-200">Backend</span>
+        </div>
+
+        <ul class="mt-4 space-y-2 text-sm text-slate-200 list-disc pl-5">
+          <li>Verified that captured data was stored correctly in the database according to business rules.</li>
+          <li>Wrote SQL queries to validate record integrity, identify duplicates, and confirm mappings.</li>
+          <li>Debugged issues affecting persistence and data flow; supported fixes to improve reliability.</li>
+          <li>Performed functional testing and maintained documentation of validation logic and updates.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid gap-10 md:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Contact</h2>
+        <p class="mt-2 text-slate-300">
+          Prefer email? Use the button. The form is optional (needs backend like Formspree).
+        </p>
+
+        <div class="mt-6 space-y-3 text-sm">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-xs text-slate-300">Email</p>
+            <a class="mt-1 block font-semibold hover:text-white" href="mailto:ramothopomd@gmail.com">ramothopomd@gmail.com</a>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <p class="text-xs text-slate-300">Phone</p>
+            <a class="mt-1 block font-semibold hover:text-white" href="tel:+27824721267">082 472 1267</a>
+          </div>
+
+          <div class="mt-4 flex gap-3">
+            <a href="mailto:ramothopomd@gmail.com"
+               class="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200">
+              Email Me
+            </a>
+            <a href="https://github.com/your-username" target="_blank"
+               class="rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional Contact Form -->
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <!-- Success / Error Banner -->
+        <div th:if="${response != null}"
+             class="mb-4 rounded-2xl border px-4 py-3 text-sm"
+             th:classappend="${isSuccess} ? ' border-emerald-400/30 bg-emerald-500/10 text-emerald-200' : ' border-rose-400/30 bg-rose-500/10 text-rose-200'">
+          <p th:text="${response}"></p>
+        </div>
+        <form th:action="@{/send-mail}" method="post" class="space-y-4">
+          <div>
+            <label class="text-xs text-slate-300">Full Name</label>
+            <input
+                    name="name"
+                    required
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-slate-950/40 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-white/20"
+                    type="text"
+                    placeholder="Your name"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs text-slate-300">Email</label>
+            <input
+                    name="email"
+                    required
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-slate-950/40 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-white/20"
+                    type="email"
+                    placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label class="text-xs text-slate-300">Message</label>
+            <textarea
+                    name="message"
+                    required
+                    class="mt-1 w-full rounded-xl border border-white/10 bg-slate-950/40 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-white/20"
+                    rows="5"
+                    placeholder="Write your message..."
+            ></textarea>
+          </div>
+
+          <button
+                  type="submit"
+                  class="w-full rounded-xl bg-white px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-slate-200"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/10">
+  <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-400 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+    <p>© <span id="year"></span> Ramothopo Mosewa Desmond. All rights reserved.</p>
+    <div class="flex gap-4">
+      <a class="hover:text-white" href="#home">Top</a>
+      <a class="hover:text-white" href="https://github.com/your-username" target="_blank">GitHub</a>
+      <a class="hover:text-white" href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+  btn?.addEventListener("click", () => menu.classList.toggle("hidden"));
+
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
