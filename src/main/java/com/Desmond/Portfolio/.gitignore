@@ -1,0 +1,39 @@
+# ================================
+# Maven
+# ================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# ================================
+# Spring Boot
+# ================================
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# ================================
+# IDE - IntelliJ
+# ================================
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# ================================
+# Windows
+# ================================
+Thumbs.db
+
+# ================================
+# Environment Files
+# ================================
+.env
+application-secret.properties
+
