@@ -49,5 +49,5 @@ Portfolio/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Portfolio.git
+git clone https://github.com/Ramothopo-MD/Portfolio.git
 cd Portfolio
